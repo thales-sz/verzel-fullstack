@@ -13,7 +13,7 @@ function Filter({selectedFilter, setFilter, handleButtonClick}: FilterProps) {
     <aside className='w-4/5 self-stretch text-center'>
           <div className="flex flex-col gap-4">
             <h1 className='font-bold text-2xl'>Ordernar por:</h1>
-            <div className="relative w-full lg:max-w-sm">
+            <div className="relative w-full lg:max-w-sm gap-2">
                 <select
                   className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm focus:border-indigo-600"
                   value={selectedFilter}
@@ -28,8 +28,8 @@ function Filter({selectedFilter, setFilter, handleButtonClick}: FilterProps) {
                     <option value="expensive">Maior preço</option>
                     <option value="cheaper">Menor preço</option>
                 </select>
-                <button onClick={handleButtonClick}>Aplicar</button>
             </div>
+            <button onClick={handleButtonClick} className='bg-blue-200 p-1 rounded-md w-1/2 mx-auto hover:bg-blue-300'>Aplicar</button>
           </div>
         </aside>
   )
