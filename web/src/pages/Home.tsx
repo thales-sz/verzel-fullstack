@@ -22,6 +22,7 @@ function Home() {
         return priceA - priceB
       })
     }
+
     setCarsList(orderedCars)
   }
 

@@ -29,7 +29,7 @@ function Filter({selectedFilter, setFilter, handleButtonClick}: FilterProps) {
                     <option value="cheaper">Menor preço</option>
                 </select>
             </div>
-            <button onClick={handleButtonClick} className='bg-blue-200 p-1 rounded-md w-1/2 mx-auto hover:bg-blue-300'>Aplicar</button>
+            <button onClick={handleButtonClick} className='bg-indigo-200 p-1 rounded-md w-1/2 mx-auto hover:bg-indigo-300 transition-colors'>Aplicar</button>
           </div>
         </aside>
   )
