@@ -10,9 +10,9 @@ function Home() {
   return (
     <>
       <Header />
-      <div className='w-3/4'>
+      <div className='w-3/4 flex items-center mx-auto'>
         <Filter />
-        <ul className='flex flex-wrap gap-5 items-center mx-auto justify-center'>
+        <ul className='flex flex-wrap gap-5 justify-center border border-red-500'>
           {data.map((item: ICar, index) => {
             const model = item.name.split(' ')[0];
             return (
