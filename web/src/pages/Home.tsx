@@ -1,25 +1,21 @@
-import Loading from '../components/Loading';
 import '../styles/main.css'
-import { Car, getData } from '../../../crawler/src/appCrawler';
-import { useQuery } from 'react-query';
+import { data } from '../api/mockData'
+import { ICar } from '../interfaces/ICar'
 
 function Home() {
 
-  const { isLoading, data } = useQuery({
-    queryFn: getData,
-    refetchOnWindowFocus: false
-  })
-
   return (
     <section>
-      {isLoading ? <Loading /> : data?.map((item: Car, index) => (
+      {data.map((item: ICar, index) => {
+        const model = item.name.split(' ')[0]
+        return (
         <div key={index}>
-          <h1>{item.name}</h1>
-          <p>{item.name.split(' ')[0]}</p>
-          <p>{item.price}</p>
           <img src={item.image} alt={item.name} />
+          <h1>Modelo: {item.name.substring(model.length + 1)}</h1>
+          <p>Marca: {model}</p>
+          <p>Preço: {item.price}</p>
         </div>
-      )
+      )}
       )}
     </section>
   )
