@@ -8,9 +8,9 @@ interface FilterProps {
   handleButtonClick: () => void
 }
 
-function Filter({selectedFilter, setFilter, handleButtonClick}: FilterProps) {
+function PriceFilter({selectedFilter, setFilter, handleButtonClick}: FilterProps) {
   return (
-    <aside className='w-4/5 self-stretch text-center'>
+    <aside className='w-4/5 max-w-[264px] min-w-[200px] self-stretch text-center transition-all'>
           <div className="flex flex-col gap-4">
             <h1 className='font-bold text-2xl'>Ordernar por:</h1>
             <div className="relative w-full lg:max-w-sm gap-2">
@@ -35,4 +35,4 @@ function Filter({selectedFilter, setFilter, handleButtonClick}: FilterProps) {
   )
 }
 
-export default Filter
+export default PriceFilter
