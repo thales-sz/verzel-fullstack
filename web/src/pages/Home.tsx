@@ -5,6 +5,7 @@ import CarCard from '../components/CarCard';
 import Header from '../components/Header';
 import { useState } from 'react';
 import PriceFilter from '../components/PriceFilter';
+import SearchFilter from '../components/SearchFilter';
 
 function Home() {
   const [selectedPriceFilter, setPriceFilter] = useState<string>()
@@ -47,17 +48,9 @@ function Home() {
   })
 
   return (
-    <>
+    <main>
       <Header />
-      <div className={`flex w-full ${fixed ? 'fixed top-0' : ''} bg-white p-3 z-10 `}>
-        <input
-          type="text"
-          onChange={handleFilterChange}
-          value={searchTermFilter}
-          placeholder='Procure por marca, modelo, nome...'
-          className='w-2/3 mx-auto p-2.5 text-gray-500 border-2 border-slate-400 rounded-md shadow-lg mb-5'
-        />
-      </div>
+      <SearchFilter searchTermFilter={searchTermFilter} fixed={fixed} handleFilterChange={handleFilterChange}/>
       <div className={`w-3/4 flex mx-auto ${fixed ? 'mt-20' : ''}`}>
         <PriceFilter selectedFilter={selectedPriceFilter} setFilter={setPriceFilter} handleButtonClick={handleButtonClick} fixed={fixed}/>
         <ul className={`flex flex-wrap gap-5 justify-center max-w-[1160px]`}>
@@ -69,7 +62,7 @@ function Home() {
           )}
         </ul>
       </div>
-    </>
+    </main>
   )
 }
 
