@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import CarDetails from "../pages/CarDetails";
 import Login from "../pages/Login";
+import AdminPage from "../pages/AdminPage";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/car/register",
+    element: <AdminPage />,
   },
   {
     path: "*",
