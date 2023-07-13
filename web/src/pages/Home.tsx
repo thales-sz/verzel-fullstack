@@ -8,8 +8,17 @@ import PriceFilter from '../components/PriceFilter';
 
 function Home() {
   const [selectedPriceFilter, setPriceFilter] = useState<string>()
+  const [fixed, setFixed] = useState(false)
   const [searchTermFilter, setSearchTermFilter] = useState<string>('')
   const [carsList, setCarsList] = useState<ICar[]>(data)
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 120) {
+      setFixed(true)
+      return
+    }
+    setFixed(false)
+  })
 
 
   const handleButtonClick = () => {
@@ -40,18 +49,18 @@ function Home() {
   return (
     <>
       <Header />
-      <div className='flex w-full'>
+      <div className={`flex w-full ${fixed ? 'fixed top-0' : ''} bg-white p-3 z-10 `}>
         <input
           type="text"
           onChange={handleFilterChange}
           value={searchTermFilter}
           placeholder='Procure por marca, modelo, nome...'
-          className='w-2/3 mx-auto p-2.5 text-gray-500 bg-white border-2 border-slate-400 rounded-md shadow-lg mb-5 -mt-5'
+          className='w-2/3 mx-auto p-2.5 text-gray-500 border-2 border-slate-400 rounded-md shadow-lg mb-5'
         />
       </div>
-      <div className='w-3/4 flex items-center mx-auto'>
-        <PriceFilter selectedFilter={selectedPriceFilter} setFilter={setPriceFilter} handleButtonClick={handleButtonClick} />
-        <ul className='flex flex-wrap gap-5 justify-center'>
+      <div className={`w-3/4 flex mx-auto ${fixed ? 'mt-20' : ''}`}>
+        <PriceFilter selectedFilter={selectedPriceFilter} setFilter={setPriceFilter} handleButtonClick={handleButtonClick} fixed={fixed}/>
+        <ul className={`flex flex-wrap gap-5 justify-center max-w-[1160px]`}>
           {filteredProducts.map((item: ICar, index) => {
             const model = item.name.split(' ')[0];
             return (

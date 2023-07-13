@@ -43,5 +43,34 @@ export const data = [
     image: 'https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMTUyOTE5L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjQwMjE3NzY3MDYxLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTB9fX0=',
     name: 'Volkswagen Golf TSI VARIANT COMFORTLINE',
     price: 'R$ 86.476'
+  },
+  {
+    image: 'https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMTUzMjY2L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjUzOTIyMDEyODgzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTB9fX0=',
+    name: 'Jeep Renegade TURBO LONGITUDE',
+    price: 'R$ 90.629'
+  },
+  {
+    image: 'https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMTUzMjU3L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjQ0MTA5MTYzMDk3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTB9fX0=',
+    name: 'Chevrolet Tracker TURBO PREMIER',
+    price: 'R$ 83.066'
+  },
+  {
+    image: 'https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMTUyOTUyL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjQwMjA5NjUxODY3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTB9fX0=',
+    name: 'Volkswagen Golf TSI COMFORTLINE',
+    price: 'R$ 67.308'
+  }, {
+    image: 'https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMTUzMjY2L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjUzOTIyMDEyODgzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTB9fX0=',
+    name: 'Jeep Renegade TURBO LONGITUDE',
+    price: 'R$ 90.629'
+  },
+  {
+    image: 'https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMTUzMjU3L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjQ0MTA5MTYzMDk3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTB9fX0=',
+    name: 'Chevrolet Tracker TURBO PREMIER',
+    price: 'R$ 83.066'
+  },
+  {
+    image: 'https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMTUyOTUyL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjQwMjA5NjUxODY3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjU0MCwiaGVpZ2h0IjozMTB9fX0=',
+    name: 'Volkswagen Golf TSI COMFORTLINE',
+    price: 'R$ 67.308'
   }
 ]
