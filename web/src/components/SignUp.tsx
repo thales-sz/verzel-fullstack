@@ -8,7 +8,7 @@ function SignUp (): JSX.Element {
     password: ''
   })
 
-  function handleInputChange ({ target }: React.ChangeEvent<HTMLInputElement>): void {
+  const handleInputChange = ({ target }: React.ChangeEvent<HTMLInputElement>): void => {
     setForm({
       ...form,
       [target.name]: target.value
