@@ -1,13 +1,13 @@
 import '../styles/main.css'
 import { data } from '../api/mockData'
-import { ICar } from '../interfaces/ICar'
-import CarCard from '../components/CarCard';
-import Header from '../components/Header';
-import { useState } from 'react';
-import PriceFilter from '../components/PriceFilter';
-import SearchFilter from '../components/SearchFilter';
+import { type ICar } from '../interfaces/ICar'
+import CarCard from '../components/CarCard'
+import Header from '../components/Header'
+import { useState } from 'react'
+import PriceFilter from '../components/PriceFilter'
+import SearchFilter from '../components/SearchFilter'
 
-function Home() {
+function Home (): JSX.Element {
   const [selectedPriceFilter, setPriceFilter] = useState<string>()
   const [fixed, setFixed] = useState(false)
   const [searchTermFilter, setSearchTermFilter] = useState<string>('')
@@ -21,11 +21,10 @@ function Home() {
     setFixed(false)
   })
 
+  const handleButtonClick = (): void => {
+    const orderedCars = [...carsList]
 
-  const handleButtonClick = () => {
-    const orderedCars = [...carsList];
-
-    if (selectedPriceFilter) {
+    if (selectedPriceFilter != null) {
       orderedCars.sort((a: ICar, b: ICar) => {
         const priceA = Number(a.price.replace('R$ ', '').replace('.', ''))
         const priceB = Number(b.price.replace('R$ ', '').replace('.', ''))
@@ -53,12 +52,13 @@ function Home() {
       <SearchFilter searchTermFilter={searchTermFilter} fixed={fixed} handleFilterChange={handleFilterChange}/>
       <div className={`w-3/4 flex mx-auto ${fixed ? 'mt-20' : ''}`}>
         <PriceFilter selectedFilter={selectedPriceFilter} setFilter={setPriceFilter} handleButtonClick={handleButtonClick} fixed={fixed}/>
-        <ul className={`flex flex-wrap gap-5 justify-center max-w-[1160px]`}>
+        <ul className='flex flex-wrap gap-5 justify-center max-w-[1160px]'>
           {filteredProducts.map((item: ICar, index) => {
-            const model = item.name.split(' ')[0];
+            const model = item.name.split(' ')[0]
             return (
               <CarCard {...item} model={model} key={index}/>
-            )}
+            )
+          }
           )}
         </ul>
       </div>

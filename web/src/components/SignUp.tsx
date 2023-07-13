@@ -15,8 +15,8 @@ function SignUp (): JSX.Element {
     })
   }
 
-  const handleSubmit = () => {
-    console.log('submit');
+  const handleSubmit = (): void => {
+    console.log('submit')
   }
 
   return (

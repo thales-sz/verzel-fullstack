@@ -1,10 +1,10 @@
 interface SearchFilterProps {
-  fixed: boolean,
-  handleFilterChange: (event: React.FormEvent<HTMLInputElement>) => void,
+  fixed: boolean
+  handleFilterChange: (event: React.FormEvent<HTMLInputElement>) => void
   searchTermFilter: string
 }
 
-function SearchFilter({ fixed, handleFilterChange, searchTermFilter }: SearchFilterProps) {
+function SearchFilter ({ fixed, handleFilterChange, searchTermFilter }: SearchFilterProps): JSX.Element {
   return (
     <div className={`flex w-full ${fixed ? 'fixed top-0' : ''} p-3 z-10 `}>
         <input

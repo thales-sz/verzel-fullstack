@@ -1,7 +1,7 @@
-import { useRouteError } from "react-router-dom";
+import { useRouteError } from 'react-router-dom'
 
-export default function NotFound() {
-  const error = useRouteError();
+export default function NotFound (): JSX.Element {
+  const error = useRouteError()
   console.log(error)
 
   return (
@@ -9,5 +9,5 @@ export default function NotFound() {
       <h1>404 - Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
     </div>
-  );
+  )
 }

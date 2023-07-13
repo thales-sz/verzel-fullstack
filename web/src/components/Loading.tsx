@@ -1,4 +1,4 @@
-function Loading() {
+function Loading (): JSX.Element {
   return (
     <div className="text-center">
     <div role="status">

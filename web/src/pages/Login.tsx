@@ -3,7 +3,7 @@ import SignIn from '../components/SignIn'
 import SignUp from '../components/SignUp'
 import Header from '../components/Header'
 
-function Login() {
+function Login (): JSX.Element {
   const [haveAccount, setHaveAccount] = useState(true)
   return (
     <section>

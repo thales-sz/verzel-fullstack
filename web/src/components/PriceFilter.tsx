@@ -3,22 +3,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
 interface FilterProps {
-  selectedFilter: string | undefined,
-  setFilter: React.Dispatch<React.SetStateAction<string | undefined>>,
-  handleButtonClick: () => void,
+  selectedFilter: string | undefined
+  setFilter: React.Dispatch<React.SetStateAction<string | undefined>>
+  handleButtonClick: () => void
   fixed: boolean
 }
 
-function PriceFilter({selectedFilter, setFilter, handleButtonClick}: FilterProps) {
+function PriceFilter ({ selectedFilter, setFilter, handleButtonClick }: FilterProps): JSX.Element {
   return (
-    <aside className={`flex flex-col w-4/5 max-w-[264px] min-w-[200px] self-stretch text-center transition-all mt-32`}>
+    <aside className={'flex flex-col w-4/5 max-w-[264px] min-w-[200px] self-stretch text-center transition-all mt-32'}>
           <div className="gap-4 flex flex-col">
             <h1 className='font-bold text-2xl'>Ordernar por:</h1>
             <div className="relative w-full lg:max-w-sm gap-2">
                 <select
                   className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm focus:border-indigo-600"
                   value={selectedFilter}
-                  onChange={(e) => setFilter(e.target.value)}
+                  onChange={(e) => { setFilter(e.target.value) }}
                   >
                     <option className="hidden" value="filtro">
                       Filtro

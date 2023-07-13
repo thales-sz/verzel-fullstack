@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function SignIn () {
+function SignIn (): JSX.Element {
   const [form, setForm] = useState({
     email: '',
     password: ''
@@ -13,7 +13,7 @@ function SignIn () {
     })
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (): void => {
     console.log('submit')
   }
 

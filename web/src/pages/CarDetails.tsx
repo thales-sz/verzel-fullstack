@@ -1,9 +1,9 @@
-import { data } from "../api/mockData"
-import Header from "../components/Header";
+import { data } from '../api/mockData'
+import Header from '../components/Header'
 
-function CarDetails() {
+function CarDetails (): JSX.Element {
   const car = data[2]
-  const model = car.name.split(' ')[0];
+  const model = car.name.split(' ')[0]
   return (
     <article>
       <Header />
@@ -23,7 +23,6 @@ function CarDetails() {
       </section>
     </article>
   )
-
 }
 
 export default CarDetails

@@ -1,6 +1,11 @@
-function AdminPage() {
+import Header from '../components/Header'
+
+function AdminPage (): JSX.Element {
   return (
-    <div>AdminPage</div>
+    <article>
+      <Header />
+      <section />
+    </article>
   )
 }
 
